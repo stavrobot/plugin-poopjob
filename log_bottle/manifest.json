@@ -1,0 +1,19 @@
+{
+  "name": "log_bottle",
+  "description": "Log a bottle feeding in PoopJob. volume_ml is the amount drunk in milliliters and contents is breast_milk or formula. occurred_at is optional and defaults to now.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "volume_ml": {
+      "type": "integer",
+      "description": "Required. The amount in milliliters, an integer from 1 to 500."
+    },
+    "contents": {
+      "type": "string",
+      "description": "Required. One of: breast_milk, formula."
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "Optional. When the feeding happened, as ISO 8601, for example \"2026-01-12T08:30:00+02:00\". A value without an offset is read in the configured timezone. Defaults to now."
+    }
+  }
+}

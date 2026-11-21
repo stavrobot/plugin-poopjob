@@ -1,0 +1,15 @@
+{
+  "name": "breastfeeding_timer",
+  "description": "Start, switch, pause, resume, end or cancel the active breastfeeding session, or check its status. Use action start with side (left or right) to begin. switch changes side: pass side, or omit it to toggle to the other side. pause and resume stop and restart the clock. end saves the finished session; cancel discards it. status reports the active session or says there is none. Only one session can be active at a time; starting another fails until the current one is ended or cancelled.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "action": {
+      "type": "string",
+      "description": "Required. One of: start, switch, pause, resume, end, cancel, status."
+    },
+    "side": {
+      "type": "string",
+      "description": "The side for this action: left or right. Required for start. Optional for switch: omit it to switch to the other side. Do not pass it for pause, resume, end, cancel or status."
+    }
+  }
+}

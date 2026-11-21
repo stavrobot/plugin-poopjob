@@ -1,0 +1,16 @@
+{
+  "name": "poopjob",
+  "description": "A plugin for the PoopJob baby-tracking app.",
+  "summary": "Track diapers, feeds, weights, and spit-ups via PoopJob",
+  "instructions": "1. In the PoopJob app, open Settings > API keys, choose Create API key, and copy the key. It starts with pj_ and is shown only once. Set it as api_key.\n2. Set timezone to your IANA timezone name, for example Europe/Athens. The plugin uses it to read times you give without an offset and to show logged times in your local time.\n\nThe key has full access to your PoopJob log. You can revoke it in the app under Settings > API keys.",
+  "config": {
+    "api_key": {
+      "required": true,
+      "description": "PoopJob API key. Create one in the PoopJob app under Settings > API keys. It starts with 'pj_' and has full access to your baby log."
+    },
+    "timezone": {
+      "required": true,
+      "description": "IANA timezone used to interpret times without an offset and to display logged times, such as 'Europe/Athens'."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+config.json
+PLUGIN.md
+__pycache__/
+*.pyc
+.tickets/
+.pytest_cache/
+.ruff_cache/

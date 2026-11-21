@@ -1,0 +1,47 @@
+{
+  "name": "update_entry",
+  "description": "Update an existing baby log entry. Supply only fields that belong to its kind. For breastfeeding, pass the complete replacement segment list; the session's start and end are recomputed from it. To clear a diaper color, pass color 'none'.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "kind": {
+      "type": "string",
+      "description": "The entry's kind: diapers, breastfeeding, bottles, spit_ups or weights."
+    },
+    "id": {
+      "type": "string",
+      "description": "The entry id, as returned by list_entries."
+    },
+    "type": {
+      "type": "string",
+      "description": "Diapers only: poop, pee or mix."
+    },
+    "color": {
+      "type": "string",
+      "description": "Diapers only: meconium, transitional, mustard, yellowgreen, tan, pale, red or black. Pass 'none' to clear the color."
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "New time for diapers, bottles, spit-ups and weights. ISO 8601 with or without an offset, e.g. '2026-01-12T08:30:00+02:00' or '2026-01-12T08:30:00' (the latter is in the configured timezone)."
+    },
+    "volume_ml": {
+      "type": "integer",
+      "description": "Bottles only: volume in millilitres, 1 to 500."
+    },
+    "contents": {
+      "type": "string",
+      "description": "Bottles only: breast_milk or formula."
+    },
+    "size": {
+      "type": "string",
+      "description": "Spit-ups only: small, medium or large."
+    },
+    "grams": {
+      "type": "integer",
+      "description": "Weights only: weight in grams, 300 to 50000."
+    },
+    "segments": {
+      "type": "array",
+      "description": "Breastfeeding only: replaces all segments. Array of {side: left|right, started_at, ended_at}; each segment must end after it starts. The session's started_at and ended_at are recomputed from the segments."
+    }
+  }
+}

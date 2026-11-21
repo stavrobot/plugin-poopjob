@@ -1,0 +1,15 @@
+{
+  "name": "log_weight",
+  "description": "Log a weight measurement in PoopJob. grams must be an integer between 300 and 50000; convert kilograms or pounds to grams first (1 kg = 1000 g, 1 lb = 453.592 g). occurred_at is optional and defaults to now.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "grams": {
+      "type": "integer",
+      "description": "Required. The weight in grams, an integer from 300 to 50000. Convert from kilograms (multiply by 1000) or pounds (multiply by 453.592) first."
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "Optional. When the weight was measured, as ISO 8601, for example \"2026-01-12T08:30:00+02:00\". A value without an offset is read in the configured timezone. Defaults to now."
+    }
+  }
+}

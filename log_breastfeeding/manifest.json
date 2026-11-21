@@ -1,0 +1,11 @@
+{
+  "name": "log_breastfeeding",
+  "description": "Log a breastfeeding session that has already finished. segments lists the time spent on each side in order; each segment needs side (left or right), started_at and ended_at. The session's start and end are taken from the earliest segment start and the latest segment end. Use breastfeeding_timer instead for a feed that is happening now.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "segments": {
+      "type": "array",
+      "description": "Required. A non-empty array of segments, each like {\"side\": \"left\", \"started_at\": \"2026-01-12T08:30:00+02:00\", \"ended_at\": \"2026-01-12T08:40:00+02:00\"}. side is left or right. Times are ISO 8601; without an offset they are read in the configured timezone. Each segment must end after it starts."
+    }
+  }
+}

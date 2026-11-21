@@ -1,0 +1,15 @@
+{
+  "name": "log_spit_up",
+  "description": "Log a spit-up in PoopJob. size describes how much came up. occurred_at is optional and defaults to now.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "size": {
+      "type": "string",
+      "description": "Required. One of: small, medium, large."
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "Optional. When the spit-up happened, as ISO 8601, for example \"2026-01-12T08:30:00+02:00\". A value without an offset is read in the configured timezone. Defaults to now."
+    }
+  }
+}

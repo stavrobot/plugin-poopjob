@@ -1,0 +1,15 @@
+{
+  "name": "delete_entry",
+  "description": "Delete a baby log entry by kind and id. The active breastfeeding session cannot be deleted; cancel it with breastfeeding_timer instead.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "kind": {
+      "type": "string",
+      "description": "The entry's kind: diapers, breastfeeding, bottles, spit_ups or weights."
+    },
+    "id": {
+      "type": "string",
+      "description": "The entry id, as returned by list_entries."
+    }
+  }
+}

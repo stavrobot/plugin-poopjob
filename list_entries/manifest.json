@@ -1,0 +1,23 @@
+{
+  "name": "list_entries",
+  "description": "List baby log entries, newest first. Omit kind to list all kinds, grouped by kind. Returns at most `limit` entries per kind and says when results are truncated.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "kind": {
+      "type": "string",
+      "description": "Which entries to list: diapers, breastfeeding, bottles, spit_ups or weights. Omit to list every kind, grouped by kind."
+    },
+    "since": {
+      "type": "string",
+      "description": "Only entries at or after this time. ISO 8601 with or without an offset, e.g. '2026-01-12T08:30:00+02:00' or '2026-01-12T08:30:00' (the latter is in the configured timezone)."
+    },
+    "until": {
+      "type": "string",
+      "description": "Only entries strictly before this time. Same ISO 8601 formats as since."
+    },
+    "limit": {
+      "type": "integer",
+      "description": "Maximum entries to return per kind (default 20, maximum 200)."
+    }
+  }
+}

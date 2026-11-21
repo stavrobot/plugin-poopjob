@@ -1,0 +1,19 @@
+{
+  "name": "log_diaper",
+  "description": "Log a diaper change in PoopJob. type must be poop, pee or mix. color is optional and records the stool color; it is valid only for poop and mix, never for pee. occurred_at is optional and defaults to now.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "type": {
+      "type": "string",
+      "description": "Required. One of: poop, pee, mix."
+    },
+    "color": {
+      "type": "string",
+      "description": "Optional. One of: meconium, transitional, mustard, yellowgreen, tan, pale, red, black. Do not pass with type pee. Leave it out when the color was not checked."
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "Optional. When the diaper happened, as ISO 8601, for example \"2026-01-12T08:30:00+02:00\". A value without an offset is read in the configured timezone. Defaults to now."
+    }
+  }
+}
