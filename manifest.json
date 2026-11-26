@@ -10,7 +10,8 @@
     },
     "timezone": {
       "required": true,
-      "description": "IANA timezone used to interpret times without an offset and to display logged times, such as 'Europe/Athens'."
+      "description": "IANA timezone used to interpret times without an offset and to display logged times, such as 'Europe/Athens'.",
+      "secret": false
     }
   }
 }
